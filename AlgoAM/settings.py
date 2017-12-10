@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'AlgoAMDjango',
-    'AlgoAM',
+
 ]
 
 MIDDLEWARE_CLASSES = [

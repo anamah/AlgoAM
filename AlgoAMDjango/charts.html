@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+<script>
+    {% block jquerty %}
+
+        var endpoint = '/api/data/'
+
+        $.ajax({
+            method: "GET",
+            url: endpoint,
+            success: function (data) {
+                console.log(data)
+            },
+            errror: function (error_data) {
+                console.log("error")
+                console.log(error_data)
+            }
+        })
+
+    {% endblock %}
+</script>
+
+{% block content %}
+
+    <div class='row'>
+            <div class='col-sm-12' url-endpoint='{% url "api-data" %}'>
+                <h1>Hello</h1>
+            </div>
+    </div>
+
+{% endblock content %}
